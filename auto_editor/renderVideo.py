@@ -94,11 +94,16 @@ def renderAv(ffmpeg, ffprobe, vidFile: str, args, chunks: list, speeds: list, fp
 
 def renderOpencv(ffmpeg, ffprobe, vidFile: str, args, chunks: list, speeds: list, fps,
     effects, temp, log):
+    
+    # TODO use our own build of openCV that has h264 support
     import cv2
 
     cap = cv2.VideoCapture(vidFile)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+    # TODO enable customized output. Most likely AVC1 (maybe HEVC for 'pro' tier)
+    # vp9 is supported in chromium and windows, just no native support on mac
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 
     if(args.scale != 1):

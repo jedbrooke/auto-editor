@@ -29,3 +29,4 @@ dist/
 ._*
 
 electron/node_modules
+.vscode

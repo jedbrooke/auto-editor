@@ -54,3 +54,13 @@ Auto-Editor is under the [Public Domain](https://github.com/WyattBlue/auto-edito
 
 ## Issues
 If you have a bug or a code suggestion, you can [create a new issue](https://github.com/WyattBlue/auto-editor/issues/new) here. If you'll like to discuss this project, suggest new features, or chat with other users, you can use [the discord server](https://discord.com/invite/kMHAWJJ).
+
+## LA Hacks project addition ideas
+
+- [ ] Electron GUI for a modern, intuitive interface
+- [ ] More flexible encoder options for video processing
+    - [] control quality, crf/bitrate
+    - [] option for vp9 or h264
+- [ ] GPU/multithreading acceleration
+- [ ] Option to output video in lower resolution for lighter processing
+- [ ] Cloud hosted option 
