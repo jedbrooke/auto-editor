@@ -3,9 +3,10 @@ document.addEventListener('drop', (event) => {
 	event.stopPropagation();
 
 	for (const f of event.dataTransfer.files) {
+
         // f.path contains file path
 		// Using the path attribute to get absolute file path
-		// console.log('File Path of dragged files: ', f.path)
+		console.log('File Path of dragged files: ', f.path)
 	}
 });
 

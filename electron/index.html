@@ -19,5 +19,39 @@
   
     <!-- Adding Individual Renderer Process JS File -->
     <script src="renderer.js"></script>
+
+
+    <fieldset>
+
+    <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="testFile">
+        <small id="fileHelp" class="form-text text-muted">Browse for files.</small>
+      </div>
+
+      <div class="form-group">
+        <select class="custom-select">
+          <option selected="">Export to</option>
+          <option value="1">Raw Video Format</option>
+          <option value="2">Adobe Premiere</option>
+          <option value="3">Final Cut Pro</option>
+          <option value="3">DaVinci Resolve</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile02">
+            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Upload</span>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="button" class="btn btn-primary btn-lg">Export</button>
+
 </body>
 </html>
