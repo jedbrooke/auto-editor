@@ -14,7 +14,6 @@
 *.webm
 *.xml
 *.fcpxml
-*.json
 *.pyc
 *.pyo
 *~
