@@ -1,7 +1,7 @@
 fieldset {
     display: flex;
     flex-flow: column nowrap;
-    width: 50%
+    width: 50%;
 }
 
 #filedrag
@@ -19,6 +19,13 @@ fieldset {
 
 .custom-select {
     flex-direction: row;
+}
+
+.options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .Footer {
