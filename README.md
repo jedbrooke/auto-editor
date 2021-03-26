@@ -61,6 +61,22 @@ If you have a bug or a code suggestion, you can [create a new issue](https://git
 - [ ] More flexible encoder options for video processing
     - [] control quality, crf/bitrate
     - [] option for vp9 or h264
+        - h264 pros: Currently the editor outputs in a fairly uncompressed format, which uses unecessarily high amount of disk space, and for a cloud service version would dramatically increase bandwidth costs.
+            - example_long.mp4 as mpeg4: output video has bitrate of 973 kb/s
+            - example_long.mp4 as h.264: output video has bitrate of 322 kb/s
+            - and the time spent processing is about the time, though cpu usage is higher.
+            - still, cpu usage is not maximum, which means there is more performance we could gain if we want to render our videos even faster.
+            - also, cv render takes about twice as long, but with 1/5th the cpu usage, so as long as the output files are the same that seems like the more efficient codec, and we can slice and multisize it.
+            jk it's about the same. 
+            Opencv: 1377 %cpuSeconds
+            FFmpeg: 1367 %cpuSeconds
+            now that I think about it this makes perfect sense since I believe opencv uses ffmpeg for the back end anyway.
+            note: %cpu measures where 100% cpu is 6c/12t @4ghz of an intel i7 4930k
+            with AV renderer (ffmpeg) and single threaded h264 encoding, we get 1062 %cpuSeconds, a nice improvement, although our wall clock time increases to 81 seconds, the %cpuSeconds shows we are making more efficient use of the hardware. And, the bitrate is even slightly lower at 320 kb/s, though that is likely down to margin of error.
+            at 2 threads we get 1194 %cpuSeconds, so it looks like 1 thread is the most efficient.
+            
+
+        - h264 cons: Significantly higher processing demands, potentially an issue for home users of the desktop version. Cloud can have stronger processors, but that also means higher costs. Although the data shows it's actually about the same?
 - [ ] GPU/multithreading acceleration
 - [ ] Option to output video in lower resolution for lighter processing
 - [ ] Cloud hosted option 

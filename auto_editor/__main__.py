@@ -678,9 +678,9 @@ def main():
         log.print(f'Auto-Editor made {numCuts} cut{s}', end='')
         log.print(f', which would have taken about {timeSave} if edited manually.')
 
-    if(not args.no_open):
-        from usefulFunctions import smartOpen
-        smartOpen(newOutput, log)
+    # if(not args.no_open):
+    #     from usefulFunctions import smartOpen
+    #     smartOpen(newOutput, log)
 
     log.debug('Deleting temp dir')
 

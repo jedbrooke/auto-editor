@@ -30,3 +30,7 @@ dist/
 
 electron/node_modules
 .vscode
+example_long_auto.mp4
+example_long_av.mp4
+example_long_cv.mp4
+example_long.mp4

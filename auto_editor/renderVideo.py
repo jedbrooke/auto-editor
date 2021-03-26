@@ -12,7 +12,8 @@ def properties(cmd, args, vidFile, ffprobe):
     elif(args.video_codec == 'uncompressed'):
         cmd.extend(['-vcodec', 'mpeg4', '-qscale:v', '1'])
     else:
-        cmd.extend(['-vcodec', args.video_codec])
+        # TODO add cli for number of threads
+        cmd.extend(['-vcodec', args.video_codec,"-x264-params","threads=1"])
 
         if(args.video_bitrate is None):
             cmd.extend(['-crf', args.constant_rate_factor])
@@ -52,7 +53,7 @@ def renderAv(ffmpeg, ffprobe, vidFile: str, args, chunks: list, speeds: list, fp
 
     cmd = properties(cmd, args, vidFile, ffprobe)
     cmd.append(f'{temp}{sep()}spedup.mp4')
-
+    print(*cmd)
     if(args.show_ffmpeg_debug):
         process2 = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     else:
@@ -104,7 +105,7 @@ def renderOpencv(ffmpeg, ffprobe, vidFile: str, args, chunks: list, speeds: list
 
     # TODO enable customized output. Most likely AVC1 (maybe HEVC for 'pro' tier)
     # vp9 is supported in chromium and windows, just no native support on mac
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fourcc = cv2.VideoWriter_fourcc(*'avc1')
 
     if(args.scale != 1):
         width = int(width * args.scale)

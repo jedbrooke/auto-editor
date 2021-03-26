@@ -3,7 +3,10 @@ import subprocess
 import time
 import datetime
 import sys
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import numpy as np
 
 class DataEntry:
     def __init__(self,timestamp,cpu_data):
@@ -50,13 +53,18 @@ def main():
 
     timestamps,usage = [e.timestamp for e in entries],[e.cpu_idle for e in entries]
     t0 = timestamps[0]
-    timestamps = [t - t0 for t in timestamps]
-    usage = [100 - u for u in usage]
+    timestamps,usage = np.array(timestamps),np.array(usage)
+    timestamps = timestamps - t0
+    usage = 100 - usage
 
     plt.plot(timestamps,usage)
+    plt.xlabel("Seconds")
+    plt.ylabel("% CPU usage")
+    plt.ylim(0,100)
     plt.savefig("usage.png")
 
-
+    cpu_percent_seconds = np.sum(usage)
+    print("CPU % seconds:",cpu_percent_seconds)
     
 
     os.remove(cpu_temp_file_path)
