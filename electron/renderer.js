@@ -7,11 +7,11 @@ document.addEventListener('drop', (event) => {
         // f.path contains file path
 		// Using the path attribute to get absolute file path
 		console.log('File Path of dragged files: ', f.path)
-		Output("<p>File information: <strong>" + f.name +
+		document.getElementById("messages").innerHTML = "<p>File information: <strong>" + f.name +
 		"</strong> type: <strong>" + f.type +
 		"</strong> size: <strong>" + f.size +
 		"</strong> size: <strong>" + f.path +
-		"</strong> bytes</p>");
+		"</strong> bytes</p>" + document.getElementById("messages").innerHTML;
 	}
 });
 
