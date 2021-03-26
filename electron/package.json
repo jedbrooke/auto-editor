@@ -1,8 +1,8 @@
 {
     "name": "my-electron-app",
     "version": "0.1.0",
-    "author": "your name",
-    "description": "My Electron app",
+    "author": "Atharva Ranadive, Jake Davidson, jasper Edbrooke, Matt Atmadja",
+    "description": "GUI for the Auto Editor",
     "main": "main.js",
     "scripts": {
         "start": "electron ."
