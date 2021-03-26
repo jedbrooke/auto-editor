@@ -21,6 +21,7 @@ fieldset {
     flex-direction: row;
 }
 
+<<<<<<< Updated upstream
 
 #filedrag.hover
 {
@@ -28,4 +29,14 @@ fieldset {
 	border-color: #f00;
 	border-style: solid;
 	box-shadow: inset 0 3px 4px #888;
+=======
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #375a7f;
+    color: white;
+    text-align: center;
+>>>>>>> Stashed changes
 }
