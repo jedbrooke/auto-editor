@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="AddOns.css">
-    <title>Auto-Editor</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="AddOns.css">
+  <title>Auto-Editor</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <script src="main.js"></script>
 </head>
-<body>
-    <h1>Auto Editor</h1>
-    
 
-    <h3>Drag and Drop Files in the Window.</h3>
+<body>
+  <h1>Auto Editor</h1>
+
+  <h3>Drag and Drop Files in the Window.</h3>
   
     <!-- Adding Individual Renderer Process JS File -->
-    <script src="renderer.js"></script>
+  <script src="renderer.js"></script>
 
-    <form onsubmit="exportFile()" id="mainForm">
-      <input type="file" id="inputFiles">
-      <fieldset>
+  <form onsubmit="exportFile()" id="mainForm">
+    <!-- <input type="file" id="inputFiles"> -->
+    <fieldset>
 
       <div class="form-group">
         <label for="fileSelect">Your Files</label>
@@ -37,19 +37,20 @@
             <input type="file" class="custom-file-input" id="inputGroupFile02">
             <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
           </div>
-          <div class="input-group-append">
+          <!-- <div class="input-group-append">
             <span class="input-group-text">Upload</span>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="form-group">
         <select class="custom-select" id="exportType" form="mainForm"> 
           <option selected="">Export to</option>
-          <option value="1">Raw Video Format</option>
+          <option value="1">Video File</option>
           <option value="2">Adobe Premiere</option>
           <option value="3">Final Cut Pro</option>
           <option value="4">DaVinci Resolve</option>
+          <option value="5">Audio File</option>
         </select>
       </div>
 
@@ -57,6 +58,7 @@
     </fieldset>
 
     <button type="submit" class="btn btn-primary btn-lg">Export</button>
+    
   </form>
 
   <div class="Footer">
