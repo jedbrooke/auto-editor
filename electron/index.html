@@ -17,13 +17,29 @@
     <!-- Adding Individual Renderer Process JS File -->
     <script src="renderer.js"></script>
 
+    <form onsubmit="exportFile()" id="mainForm">
+      <input type="file" id="inputFiles">
+      <fieldset>
 
-    <fieldset>
+      <div class="form-group">
+        <label for="fileSelect">Your Files</label>
+        <select multiple="" class="form-control" id="fileSelect">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
 
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="testFile">
-        <small id="fileHelp" class="form-text text-muted">Browse for files.</small>
+        <div class="input-group mb-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile02">
+            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Upload</span>
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
@@ -35,20 +51,12 @@
           <option value="3">DaVinci Resolve</option>
         </select>
       </div>
-      <div class="form-group">
-        <div class="input-group mb-3">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile02">
-            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-          </div>
-          <div class="input-group-append">
-            <span class="input-group-text">Upload</span>
-          </div>
-        </div>
-      </div>
+
+      
     </fieldset>
 
-    <button type="button" class="btn btn-primary btn-lg">Export</button>
+    <button type="submit" class="btn btn-primary btn-lg">Export</button>
+  </form>
 
     <p>
         We are using Node.js <span id="node-version"></span>,

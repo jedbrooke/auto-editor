@@ -28,3 +28,7 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
+function exportFile (){
+  alert(document.forms['mainForm']['inputFiles'].files[0].path);
+}
