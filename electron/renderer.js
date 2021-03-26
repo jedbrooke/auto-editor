@@ -10,7 +10,6 @@ document.addEventListener('drop', (event) => {
 		document.getElementById("messages").innerHTML = "<p>File information: <strong>" + f.name +
 		"</strong> type: <strong>" + f.type +
 		"</strong> size: <strong>" + f.size +
-		"</strong> size: <strong>" + f.path +
 		"</strong> bytes</p>" + document.getElementById("messages").innerHTML;
 	}
 });
