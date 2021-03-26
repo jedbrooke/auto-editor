@@ -51,6 +51,8 @@ fieldset {
 }
 
 button.btn.btn-primary.btn-lg {
+    background-color: #20c997;
+    border-color: #20c997;
     position: absolute;
     bottom: 6vh;
     right: 2vw;
