@@ -40,28 +40,28 @@
         <div class="form-group">
           Export Quality
           <select class="custom-select" id="exportBit" name="exportBit" form="mainForm" data-toggle="tooltip" data-placement="top" title="Lower quality will export faster, but look more blocky">
-            <option value="1">Low</option>
-            <option value="2">Medium</option>
-            <option value="3">High</option>
+            <option value="-crf 36">Low</option>
+            <option value="-crf 24">Medium</option>
+            <option value="-crf 20">High</option>
           </select>
         </div>
       
         <div class="form-group">
         Export Resolution
         <select class="custom-select" id="exportRes" name="exportRes" form="mainForm">
-          <option value="1">720p</option>
-          <option value="2">1080p</option>
+          <option value="--scale 720">720p</option>
+          <option value="--scale 1080">1080p</option>
         </select>
       </div>
 
       <div class="form-group">
         Export To
         <select class="custom-select" id="exportType" name="exportType" form="mainForm">
-          <option value="1">Video File</option>
-          <option value="2">Adobe Premiere</option>
-          <option value="3">Final Cut Pro</option>
-          <option value="4">DaVinci Resolve</option>
-          <option value="5">Audio File</option>
+          <option value=" ">Video File</option>
+          <option value="-exp">Adobe Premiere</option>
+          <option value="-exf">Final Cut Pro</option>
+          <option value="-exr">DaVinci Resolve</option>
+          <option value="-exa">Audio File</option>
         </select>
       </div>
       </div>
