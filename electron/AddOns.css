@@ -27,6 +27,10 @@ fieldset {
     width: 100%;
 }
 
+.cheese {
+    padding-right: 1vw;
+}
+
 .Footer {
     position: fixed;
     left: 0;
