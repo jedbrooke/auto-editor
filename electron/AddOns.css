@@ -1,4 +1,9 @@
 fieldset {
     display: flex;
     flex-flow: column nowrap;
+    width: 50%;
+}
+
+.custom-select {
+    flex-direction: row;
 }
