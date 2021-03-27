@@ -27,8 +27,8 @@
       <div class="form-group">
         <div class="input-group mb-3">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile02" name="inputGroupFile02">
-            <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+            <input type="file" class="custom-file-input" id="filePath" name="filePath[]" multiple>
+            <label class="custom-file-label" for="filePath">Choose file</label>
           </div>
           <!-- <div class="input-group-append">
             <span class="input-group-text">Upload</span>
@@ -96,12 +96,12 @@
               <div class="options">
                 <div class="form-group">
                   <label class="col-form-label" for="audBit" data-toggle="tooltip" data-placement="top" title="Sets the quality of the audio (kb/s)">Audio Bitrate</label>
-                  <input type="number" class="form-control" value="128" id="audBit" name="audBit" min="0" max="320">
+                  <input type="number" class="form-control" placeholder="128" id="audBit" name="audBit" min="0" max="320">
                 </div>
 
                 <div class="form-group">
                   <label class="col-form-label" for="vidBit" data-toggle="tooltip" data-placement="top" title="Constant rate factor of the video">CRF</label>
-                  <input type="number" class="form-control" value="24" id="vidBit" name="vidBit" min="15" max="40" step="1">
+                  <input type="number" class="form-control" placeholder="24" id="vidBit" name="vidBit" min="15" max="40" step="1">
                 </div>
               </div>
 
