@@ -2011,7 +2011,7 @@
  
  .form-control {
    display: block;
-   width: 100%;
+   width: 40vw;
    height: calc(1.5em + 0.75rem + 2px);
    padding: 0.375rem 0.75rem;
    font-size: 0.9375rem;

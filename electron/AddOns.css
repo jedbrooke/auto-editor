@@ -23,7 +23,7 @@ fieldset {
 .options {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -53,7 +53,7 @@ fieldset {
 button.btn.btn-primary.btn-lg {
     background-color: #20c997;
     border-color: #20c997;
-    position: absolute;
+    position: fixed;
     bottom: 6vh;
     right: 2vw;
 }
