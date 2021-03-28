@@ -50,6 +50,13 @@ def renderAv(ffmpeg, ffprobe, vidFile: str, args, chunks: list, speeds: list, fp
     if(args.scale != 1):
         cmd.extend(['-vf', f'scale=iw*{args.scale}:ih*{args.scale}'])
 
+    if(args.output_width > 0 and args.output_height > 0):
+        cmd.extend(['-vf',f"scale={args.output_width}:{args.output_height}"])
+    elif(args.output_width == 0 and args.output_height > 0):
+        cmd.extend(['-vf',f"scale=-1:{args.output_height}"])
+    elif(args.output_width > 0 and args.output_height == 0):
+        cmd.extend(['-vf',f"scale={args.output_width}:-1"])
+
     cmd = properties(cmd, args, vidFile, ffprobe)
     cmd.append(f'{temp}{sep()}spedup.mp4')
 

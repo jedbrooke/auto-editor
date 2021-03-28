@@ -109,7 +109,7 @@
         $output_name .= ".wav";
     } else {
         $output_name .= ".mp4";
-        array_push($cmd,"--video_codec libx264");
+        array_push($cmd,"--video_codec libx264 --render av");
     }
     
     array_push($cmd,"--output","/var/www/exports/$output_name");

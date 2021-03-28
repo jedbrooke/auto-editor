@@ -6,6 +6,7 @@ import os
 import sys
 import tempfile
 import getpass
+import uuid
 from shutil import rmtree
 
 version = '21w11a'
@@ -111,6 +112,12 @@ def main_options():
     ops += add_argument('--constant_rate_factor', '-crf', type=int, default=15,
         group='exportMediaOps', range='0 to 51',
         help='set the quality for video using the crf method.')
+    ops += add_argument('--output_width','-ow', type=int, default=0,
+        group="exportMediaOps", range='0 to 3840',
+        help="set the otput width in pixels of the final video")
+    ops += add_argument('--output_height','-oh', type=int, default=0,
+        group="exportMediaOps", range='0 to 2160',
+        help="set the output height in pixels of the final video")
 
     ops += add_argument('motionOps', nargs=0, action='grouping')
     ops += add_argument('--dilates', '-d', type=int, default=2, range='0 to 5',
@@ -340,7 +347,9 @@ def main():
 
     # TEMP = tempfile.mkdtemp()
 
-    TEMP = os.path.join("/var/www/auto_editor_temp_dir") 
+    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4()))
+    os.mkdir(TEMP)
+
     log = Log(args.debug, args.quiet, temp=TEMP)
     log.debug(f"\n   - Running as {getpass.getuser()}")
     log.debug(f'\n   - Temp Directory: {TEMP}')

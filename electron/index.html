@@ -41,8 +41,9 @@
         <div class="form-group">
           <label class="col-form-label" for="exportRes">Export Resolution</label>
           <select class="custom-select" id="exportRes" name="exportRes" form="mainForm">
-            <option value="--scale 720">720p</option>
-            <option value="--scale 1080">1080p</option>
+            <option value="--output_height 720">720p</option>
+            <option value="--output_height 1080">1080p</option>
+            <option disabled value="--output_height 2160">4K (Coming Soon!)</option>
           </select>
         </div>
 
@@ -101,7 +102,7 @@
 
                   <div class="form-group">
                     <label class="col-form-label" for="silentSpeed" data-toggle="tooltip" data-placement="top" title="Set how fast silent portions of the video are">Silent Speed(0.1x-10x)</label>
-                    <input type="number" class="form-control" value="1" id="silentSpeed" name="silentSpeed" max="10" min="0.1" step="0.1">
+                    <input type="number" class="form-control" value="99999" id="silentSpeed" name="silentSpeed" max="99999" min="0.1" step="0.1">
                   </div>
                 </div>
 
