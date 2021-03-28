@@ -26,7 +26,7 @@
     $id = uniqid("", $more_entropy = false);
     $name = "$id.mp4";
 
-    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor","$uploads_dir/$name");
+    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor","$uploads_dir/$name","--no_open");
 
     array_push($cmd,$_POST['exportRes']);
 
@@ -63,6 +63,9 @@
 
     echo("Temp name: $temp_name <br>");
     echo("file type: $image_file_type <br>");
+    foreach($_FILES["filePath"] $key => $value) {
+        echo("'$key':'$value'<br>");
+    }
 
     if ($_FILES["filePath"]["size"] > $upload_limit) {
         $upload_ok = FALSE;
