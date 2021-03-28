@@ -13,7 +13,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 	// output information
 	function Output(msg) {
-		var m = $id("messages");
+		var m = $id("filedrag");
 		m.innerHTML = msg;
 	}
 
