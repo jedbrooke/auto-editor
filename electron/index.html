@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="AddOns.css">
   <title>Auto-Editor</title>
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
@@ -13,22 +13,22 @@
 </head>
 
 <body>
-  <h1>Auto Editor</h1>
-
-  <h3>Drag and Drop Files in the Window.</h3>
-  
+  <div style="display:flex;">
+    <h1 id="auto">Auto</h1><h1 id="editor">-Editor</h1>
+  </div>
     <!-- Adding Individual Renderer Process JS File -->
-  <script src="renderer.js"></script>
+  
 
   <form onsubmit="exportFile()" id="mainForm" name="mainForm" action="export.php" method="post">
     <!-- <input type="file" id="inputFiles"> -->
     <fieldset>
 
       <div class="form-group">
+        <div id="filedrag">Drag and drop files here</div>
         <div class="input-group mb-3">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="filePath" name="filePath[]" multiple>
             <label class="custom-file-label" for="filePath">Choose file</label>
+            <input type="file" class="custom-file-input" id="filePath" name="filePath[]" multiple="multiple">
           </div>
           <!-- <div class="input-group-append">
             <span class="input-group-text">Upload</span>
@@ -125,10 +125,7 @@
 
     </fieldset>
 
-    
-
     <button type="submit" class="btn btn-primary btn-lg">Export</button>
-    <p id="test" name="test" style="display:none"></p>
   </form>
 
   <div class="Footer">
@@ -138,5 +135,6 @@
         and Electron <span id="electron-version"></span>.
     </p>
   </div>
+  <script src="filedrag.js"></script>
 </body>
 </html>

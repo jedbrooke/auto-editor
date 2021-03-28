@@ -7,6 +7,7 @@ document.addEventListener('drop', (event) => {
         // f.path contains file path
 		// Using the path attribute to get absolute file path
 		console.log('File Path of dragged files: ', f.path)
+		document.getElementById("filePath").push(f);
 		document.getElementById("messages").innerHTML = "<p>File information: <strong>" + f.name +
 		"</strong> type: <strong>" + f.type +
 		"</strong> size: <strong>" + f.size +
@@ -26,3 +27,8 @@ document.addEventListener('dragover', (e) => {
 // document.addEventListener('dragleave', (event) => {
 // 	console.log('File has left the Drop Space');
 // });
+
+
+function  exportFile(){
+	alert(document.getElementById("test").innerHTML);
+}
