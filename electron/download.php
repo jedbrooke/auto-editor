@@ -136,34 +136,7 @@
         <div class="mouseover" style="display:flex;">
             <h1 id="auto"><a href="http://auto-editor.ddns.net/" style="color:#3b8eda;">Auto</a></h1><h1 id="editor"><a href="http://auto-editor.ddns.net/" style="color:#66c3f8;">-Editor</a></h1>
         </div>
-
-        <div class="center"></div>
-
-        <div class="inner-spin">
         
-            <div class="inner-arc inner-arc_start-a"></div>
-            <div class="inner-arc inner-arc_end-a"></div>
-
-            <div class="inner-arc inner-arc_start-b"></div>
-            <div class="inner-arc inner-arc_end-b"></div>
-            
-            <div class="inner-moon-a"></div>
-            <div class="inner-moon-b"></div>
-        
-        </div>
-
-        <div class="outer-spin">
-        
-            <div class="outer-arc outer-arc_start-a"></div>
-            <div class="outer-arc outer-arc_end-a"></div>
-
-            <div class="outer-arc outer-arc_start-b"></div>
-            <div class="outer-arc outer-arc_end-b"></div>
-            
-            <div class="outer-moon-a"></div>
-            <div class="outer-moon-b"></div>
-        
-        </div>
 
         <?php
             $id = $_GET["id"];
@@ -171,6 +144,33 @@
                 echo("<h3>Your video has finished processing, it's available <a href='downloads/$id.mp4'>here</a></h3>");
             }else{
                 echo("<h3>Your video has not processed yet, please refresh in a moment.</h3>");
+                echo("<div class="center"></div>
+
+                <div class="inner-spin">
+                
+                    <div class="inner-arc inner-arc_start-a"></div>
+                    <div class="inner-arc inner-arc_end-a"></div>
+    
+                    <div class="inner-arc inner-arc_start-b"></div>
+                    <div class="inner-arc inner-arc_end-b"></div>
+                    
+                    <div class="inner-moon-a"></div>
+                    <div class="inner-moon-b"></div>
+                
+                </div>
+    
+                <div class="outer-spin">
+                
+                    <div class="outer-arc outer-arc_start-a"></div>
+                    <div class="outer-arc outer-arc_end-a"></div>
+    
+                    <div class="outer-arc outer-arc_start-b"></div>
+                    <div class="outer-arc outer-arc_end-b"></div>
+                    
+                    <div class="outer-moon-a"></div>
+                    <div class="outer-moon-b"></div>
+                
+                </div>");
             }
                 // if id is finished by checking output dir
             // give them the download
