@@ -53,7 +53,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			document.getElementById("exportButton").disabled = false;
 
 		}else{
-			Output("Notice: Please upload a video or audio file (.mp4, .mp3 ...etc)");
+			Output("Please upload a video or audio file (.mp4, .mp3 ...etc)");
 			document.getElementById("exportButton").disabled = true;
 		}
 		
