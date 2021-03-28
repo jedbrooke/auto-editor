@@ -22,11 +22,6 @@
     <?php
     // generate a video ID
     $uploads_dir = "/var/www/imports";
-    if(touch("$uploads_dir/foo.txt")){
-        echo("touch $uploads_dir/foo.txt successful! <br>");
-    } else {
-        echo("touch $uploads_dir/foo.txt failed! <br>");
-    }
 
     $id = uniqid("", $more_entropy = false);
     
@@ -43,17 +38,13 @@
 
     $input_name = "$id.$file_extension";
 
-    echo("Temp name: $temp_name <br>");
-    echo("file type: $file_extension <br>");
-
-    echo("changes<br>");
-    foreach($_POST as $key => $value) {
+    /* foreach($_POST as $key => $value) {
         echo("'$key':'$value'<br>");
     }
 
     foreach($_FILES["filePath"] as $key => $value) {
         echo("'$key':'$value'<br>");
-    }
+    } */
 
     if ($_FILES["filePath"]["size"] > $upload_limit) {
         $upload_ok = FALSE;
@@ -68,7 +59,7 @@
     }
     
     if($upload_ok) {
-        echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$input_name <br>");
+        // echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$input_name <br>");
         if(!move_uploaded_file($_FILES["filePath"]["tmp_name"], "$uploads_dir/$input_name")) {
             $upload_ok = FALSE;
             echo("<h3>Sorry, something went wrong uploading your video :/</h3>");
@@ -119,8 +110,8 @@
 
     if($upload_ok) {
         // non blocking call to process.php with $cmd and $id
-        echo("php process.php \"$cmd\" $id &");
-        shell_exec("php process.php \"$cmd\" $id &");
+        // echo("php process.php \"$cmd\" $id &");
+        passthru("php process.php \"$cmd\" $id &");
         echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     }
     ?>
