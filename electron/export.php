@@ -31,7 +31,7 @@
     $id = uniqid("", $more_entropy = false);
     $output_name = "$id.mp4";
 
-    $cmd = implode(" ",$cmd);
+    
     
     // handle uploaded file
     $upload_limit = 100000000;
@@ -101,7 +101,8 @@
     array_push($cmd,"--output","/home/ubuntu/exports/$output_name");
     array_push($cmd,"--video_codec libx264");
 
-    
+    $cmd = implode(" ",$cmd);
+
     if($upload_ok) {
         // non blocking call to process.php with $cmd and $id
         echo("php process.php \"$cmd\" $id &");
