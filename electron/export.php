@@ -61,8 +61,8 @@
     $temp_name = $_FILES["filePath"]["name"];
     $image_file_type = strtolower(pathinfo($temp_name,PATHINFO_EXTENSION));
 
-    echo("Temp name: $temp_name");
-    echo("file type: $image_file_type");
+    echo("Temp name: $temp_name <br>");
+    echo("file type: $image_file_type <br>");
 
     if ($_FILES["filePath"]["size"] > $upload_limit) {
         $upload_ok = FALSE;
