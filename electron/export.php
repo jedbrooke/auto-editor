@@ -42,7 +42,7 @@
     array_push($cmd,$vidSpeed);
     array_push($cmd,$silentSpeed);
 
-    array_psuh($cmd,$_POST['exportType']);
+    array_push($cmd,$_POST['exportType']);
 
     array_push($cmd,"--output","/home/ubuntu/exports/$id.mp4");
 
