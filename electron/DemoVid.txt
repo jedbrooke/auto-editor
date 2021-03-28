@@ -17,4 +17,4 @@
 -talk about how things could be improved in future
     We are proud of the product we have created and know what changes need to be made. One of these is the offline desktop app, which can run the all of the video processing on the local machine.
     As we look to the future, we have some avenues on moniteziations that we could pursue. For example, a PRO user could edit 4K video or process an extremely large file. 
-    If theres any feature you would like to see, please contact us on out github page. Thanks for watching!
+    If theres any feature you would like to see, please contact us on our github page. Thanks for watching!
