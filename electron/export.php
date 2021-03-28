@@ -1,6 +1,5 @@
 <?php
-
-$cmd = "auto-editor " . $_POST['inputFiles'] . $_POST['exportRes'];
+$cmd = "auto-editor " . $_POST['inputFiles'][0] . $_POST['exportRes'];
 
 $clip = " -mclip " . (string) $_POST['minClip'];
 $cut = " -mcut " . (string) $_POST['minCut'];
@@ -25,6 +24,11 @@ $cmd .= $_POST['exportType'];
 
 $output=null;
 $retval=null;
-exec($cmd, $output, $retval);
+
+// generate a video ID
+
+// non blocking call to process.php with cmd and ID and email
+// exec($cmd, $output, $retval);
+echo("you video is being processed, when it's done it will be at this link");
 
 ?>
