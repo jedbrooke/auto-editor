@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div style="display:flex;">
+    <div class="mouseover" style="display:flex;">
         <h1 id="auto"><a href="http://auto-editor.ddns.net/" style="color:#3b8eda;">Auto</a></h1><h1 id="editor"><a href="http://auto-editor.ddns.net/" style="color:#66c3f8;">-Editor</a></h1>
     </div>
 

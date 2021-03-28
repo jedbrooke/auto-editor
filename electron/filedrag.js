@@ -43,13 +43,6 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 	}
 
-	function TextUnderline(e){
-		e.stopPropagation();
-		e.preventDefault();
-		e.target.className = (e.type == "messages" ? "hover" : "");
-	}
-
-
 	// output file information
 	function ParseFile(file) {
 		if(file.type.substring(0, 6) === "video/" || file.type.substring(0, 6) === "audio/"){
@@ -71,8 +64,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	function Init() {
 
 		var fileselect = $id("filePath"),
-			filedrag = $id("filedrag"),
-			m = $id("messages");
+			filedrag = $id("filedrag");
 		$id("exportButton").disabled = true;
 		// file select
 		fileselect.addEventListener("change", FileSelectHandler, false);
@@ -85,7 +77,6 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			filedrag.addEventListener("dragover", FileDragHover, false);
 			filedrag.addEventListener("dragleave", FileDragHover, false);
 			filedrag.addEventListener("drop", FileSelectHandler, false);
-			m.addEventListener("mouseover", TextUnderline, false);
 			filedrag.style.display = "block";
 		}
 
