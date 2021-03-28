@@ -112,7 +112,7 @@
         array_push($cmd,"--video_codec libx264");
     }
     
-    array_push($cmd,"--output","/home/ubuntu/exports/$output_name");
+    array_push($cmd,"--output","/var/www/exports/$output_name");
     
 
     $cmd = implode(" ",$cmd);
