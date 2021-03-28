@@ -21,7 +21,7 @@
 <div style="form-group">
     <?php
     // generate a video ID
-    $uploads_dir = "/home/ubuntu/imports";
+    $uploads_dir = "/imports";
     if(touch("$uploads_dir/foo.txt")){
         echo("touch $uploads_dir/foo.txt successful! <br>");
     } else {
