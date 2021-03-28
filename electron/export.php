@@ -31,7 +31,7 @@
     // handle uploaded file
     $upload_limit = 100000000;
     $upload_ok = TRUE;
-    $allowed_file_types = array("mp4","mp3","wav","mov","avi","mkv");
+    $allowed_file_types = array("mp4","mp3","wav","mov","avi","mkv","webm");
     
     $temp_name = $_FILES["filePath"]["name"];
     $file_extension = strtolower(pathinfo($temp_name,PATHINFO_EXTENSION));
@@ -54,18 +54,21 @@
         $upload_ok = FALSE;
         echo("<h3>Sorry, your file is too large, there is a 100MB limit for free tier customers</h3>");
     }
-
-    if(!in_array($file_extension,$allowed_file_types)) {
-        $upload_ok = FALSE;
-        echo("<h3>Sorry, we do not support .$file_extension files</h3>");
-        echo("<h4> supported file types: " . implode(" ", $allowed_file_types) . "</h4>");
+    if($upload_ok) {
+        if(!in_array($file_extension,$allowed_file_types)) {
+            $upload_ok = FALSE;
+            echo("<h3>Sorry, we do not support .$file_extension files</h3>");
+            echo("<h4> supported file types: " . implode(" ", $allowed_file_types) . "</h4>");
+        }
     }
     
-    echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$input_name");
-    echo(is_uploaded_file($_FILES['filePath']['tmp_name']));
-    if(!move_uploaded_file($_FILES["filePath"]["tmp_name"], "$uploads_dir/$input_name")) {
-        $upload_ok = FALSE;
-        echo("<h3>Sorry, something went wrong uploading your video :/</h3>");
+    if($upload_ok) {
+        echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$input_name <br>");
+        echo(is_uploaded_file($_FILES['filePath']['tmp_name']));
+        if(!move_uploaded_file($_FILES["filePath"]["tmp_name"], "$uploads_dir/$input_name")) {
+            $upload_ok = FALSE;
+            echo("<h3>Sorry, something went wrong uploading your video :/</h3>");
+        }
     }
 
     $cmd = array("/usr/bin/python3","/home/ubuntu/auto-editor/auto_editor/__main__.py","$uploads_dir/$input_name","--no_open");
