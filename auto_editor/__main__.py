@@ -5,7 +5,7 @@
 import os
 import sys
 import tempfile
-import uuid
+import getpass
 from shutil import rmtree
 
 version = '21w11a'
@@ -342,7 +342,7 @@ def main():
 
     TEMP = os.path.join("/var/www/auto_editor_temp_dir") 
     log = Log(args.debug, args.quiet, temp=TEMP)
-    log.debug(f"\n running as {os.getegid()}")
+    log.debug(f"\n   - Running as {getpass.getuser()}")
     log.debug(f'\n   - Temp Directory: {TEMP}')
 
     if(is64bit == '32-bit'):
