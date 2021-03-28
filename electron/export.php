@@ -30,15 +30,15 @@
 
     array_push($cmd,$_POST['exportRes']);
 
-    $clip = " -mclip " . (string) $_POST['minClip'];
-    $cut = " -mcut " . (string) $_POST['minCut'];
-    $vidSpeed = " -v " . (string) $_POST['vidSpeed'];
-    $silentSpeed = " -s " . (string) $_POST['silentSpeed'];
+    $clip = "--min_clip_length " . (string) $_POST['minClip'];
+    $cut = "--min_cut_length " . (string) $_POST['minCut'];
+    $vidSpeed = "--video_speed " . (string) $_POST['vidSpeed'];
+    $silentSpeed = "--silent_speed " . (string) $_POST['silentSpeed'];
 
     if($_POST['vidBit'] == null && $_POST['audbit'] == null){
         array_push($cmd,$_POST['exportBit']);
     }else{
-        array_push($cmd,"-ab",(string) $_POST['audBit'],"-crf",(string) $_POST['vidBit']);
+        array_push($cmd,"--audio_bitrate",(string) $_POST['audBit'],"--constant_rate_factor",(string) $_POST['vidBit']);
     }
 
     array_push($cmd,$clip);
