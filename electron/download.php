@@ -144,31 +144,31 @@
                 echo("<h3>Your video has finished processing, it's available <a href='downloads/$id.mp4'>here</a></h3>");
             }else{
                 echo("<h3>Your video has not processed yet, please refresh in a moment.</h3>");
-                echo("<div class="center"></div>
+                echo("<div class=\"center\"></div>
 
-                <div class="inner-spin">
+                <div class=\"inner-spin\">
                 
-                    <div class="inner-arc inner-arc_start-a"></div>
-                    <div class="inner-arc inner-arc_end-a"></div>
+                    <div class=\"inner-arc inner-arc_start-a\"></div>
+                    <div class=\"inner-arc inner-arc_end-a\"></div>
     
-                    <div class="inner-arc inner-arc_start-b"></div>
-                    <div class="inner-arc inner-arc_end-b"></div>
+                    <div class=\"inner-arc inner-arc_start-b\"></div>
+                    <div class=\"inner-arc inner-arc_end-b\"></div>
                     
-                    <div class="inner-moon-a"></div>
-                    <div class="inner-moon-b"></div>
+                    <div class=\"inner-moon-a\"></div>
+                    <div class=\"inner-moon-b\"></div>
                 
                 </div>
     
-                <div class="outer-spin">
+                <div class=\"outer-spin\">
                 
-                    <div class="outer-arc outer-arc_start-a"></div>
-                    <div class="outer-arc outer-arc_end-a"></div>
+                    <div class=\"outer-arc outer-arc_start-a\"></div>
+                    <div class=\"outer-arc outer-arc_end-a\"></div>
     
-                    <div class="outer-arc outer-arc_start-b"></div>
-                    <div class="outer-arc outer-arc_end-b"></div>
+                    <div class=\"outer-arc outer-arc_start-b\"></div>
+                    <div class=\"outer-arc outer-arc_end-b\"></div>
                     
-                    <div class="outer-moon-a"></div>
-                    <div class="outer-moon-b"></div>
+                    <div class=\"outer-moon-a\"></div>
+                    <div class=\"outer-moon-b\"></div>
                 
                 </div>");
             }
