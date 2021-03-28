@@ -69,3 +69,8 @@ button.btn.btn-primary.btn-lg {
     bottom: 6vh;
     right: 2vw;
 }
+
+#accordion{
+    background-color: #3498db;
+    outline-color: #3498db;
+}    
