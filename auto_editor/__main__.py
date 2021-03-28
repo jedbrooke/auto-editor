@@ -340,8 +340,9 @@ def main():
 
     # TEMP = tempfile.mkdtemp()
 
-    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4())) 
+    TEMP = os.path.join("/var/www/auto_editor_temp_dir") 
     log = Log(args.debug, args.quiet, temp=TEMP)
+    log.debug(f"\n running as {os.getegid()}")
     log.debug(f'\n   - Temp Directory: {TEMP}')
 
     if(is64bit == '32-bit'):
