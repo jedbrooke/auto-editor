@@ -7,5 +7,5 @@
         mkdir("/var/www/html/downloads");
     }
     rename("/home/ubuntu/exports/$argv[2].mp4","/var/www/html/downloads/$argv[2].mp4");
-    delete("/home/ubuntu/imports/$argv[2]");
+    unlink("/home/ubuntu/imports/$argv[2]");
 ?>

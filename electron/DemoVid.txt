@@ -1,0 +1,20 @@
+-intro
+    Hello LA Hacks, Auto Editor is an existing open source command line video/audio editing program by WyattBlue. This versatile program can cut out unnecessary parts of a video
+    like silence and still footage, automatically. But due to its command line interface, its quite inaccessbile to most users, not too mention that video processing could overload
+    most computers, especially the growing number of chromebook users.
+-show product
+    This is the Cloud-based Auto Editor GUI. This vastly increases the usability of the program, first with the GUI and secondly by offloading the intensive processing to the 
+    Oracle Cloud infrastucture. Files are extremely easy to upload, drag and drop them or simply browse for your files. A beginner could use the selected primary options (talk about the options)
+    or have more control using the advanced options(talk about advanced options). Exporting the file, uploads it to the cloud, which then handles the processing. 
+    When the file is ready, you can download the mp4/m4a or any other user specified file format straight from the browser.
+-show improved vid
+    This video has actually been edited using our GUI and the Auto-Editor. For another example, this lecture video had its silent parts cut out, which deceased its view time from 40min to 30min. 
+    This 25% time saved comes at no user investment too. This brings us to to the true power of this package.
+-talk about good things
+    With all schooling being online, most lectures and other important events are held through video. But these are often too slow, which forces student to increse 
+    their efficiency by either watching it at higher speed or skipping through the video. Both can lead to less knowledge gained. With our project, just a few minutes of computing can vastly 
+    help any student, or even any person looking to save a little time.
+-talk about how things could be improved in future
+    We are proud of the product we have created and know what changes need to be made. One of these is the offline desktop app, which can run the all of the video processing on the local machine.
+    As we look to the future, we have some avenues on moniteziations that we could pursue. For example, a PRO user could edit 4K video or process an extremely large file. 
+    If theres any feature you would like to see, please contact us on out github page. Thanks for watching!

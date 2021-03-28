@@ -21,7 +21,7 @@
 <div style="form-group">
     <?php
     // generate a video ID
-    $uploads_dir = "/home/ubuntu/imports/";
+    $uploads_dir = "/home/ubuntu/imports";
 
     $id = uniqid("", $more_entropy = false);
     $name = "$id.mp4";
@@ -63,7 +63,9 @@
 
     echo("Temp name: $temp_name <br>");
     echo("file type: $image_file_type <br>");
-    foreach($_FILES["filePath"] $key => $value) {
+
+    echo("changes<br>");
+    foreach($_FILES["filePath"] as $key => $value) {
         echo("'$key':'$value'<br>");
     }
 
@@ -87,6 +89,7 @@
     
     if($upload_ok) {
         // non blocking call to process.php with $cmd and $id
+        echo("php process.php \"$cmd\" $id &");
         shell_exec("php process.php \"$cmd\" $id &");
         echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     }
