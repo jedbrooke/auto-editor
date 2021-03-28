@@ -61,7 +61,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 		var fileselect = $id("filePath"),
 			filedrag = $id("filedrag"),
-			submitbutton = $id("submitbutton");
+            submitbutton = $id("submitbutton");
 
 		// file select
 		fileselect.addEventListener("change", FileSelectHandler, false);
@@ -75,10 +75,9 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			filedrag.addEventListener("dragleave", FileDragHover, false);
 			filedrag.addEventListener("drop", FileSelectHandler, false);
 			filedrag.style.display = "block";
-
-			// remove submit button
-			submitbutton.style.display = "none";
 		}
+
+
 
 	}
 

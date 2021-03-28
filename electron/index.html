@@ -13,10 +13,9 @@
 </head>
 
 <body>
-  <h1>Auto Editor</h1>
-
-  <h3>Drag and Drop Files in the Window.</h3>
-  
+  <div style="display:flex;">
+    <h1 id="auto">Auto</h1><h1 id="editor">-Editor</h1>
+  </div>
     <!-- Adding Individual Renderer Process JS File -->
   
 
@@ -25,11 +24,11 @@
     <fieldset>
 
       <div class="form-group">
+        <div id="filedrag">Drag and drop files here</div>
         <div class="input-group mb-3">
           <div class="custom-file">
             <label class="custom-file-label" for="filePath">Choose file</label>
             <input type="file" class="custom-file-input" id="filePath" name="filePath[]" multiple="multiple">
-            <div id="filedrag">or drop files here</div>
           </div>
           <!-- <div class="input-group-append">
             <span class="input-group-text">Upload</span>
@@ -126,10 +125,7 @@
 
     </fieldset>
 
-    
-
     <button type="submit" class="btn btn-primary btn-lg">Export</button>
-    <p id="test" name="test" style="display:none"></p>
   </form>
 
   <div class="Footer">

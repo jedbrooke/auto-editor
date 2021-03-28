@@ -1,3 +1,15 @@
+#auto{
+    text-decoration: underline solid #3b8eda 0.1em;
+    text-underline-offset: 0.1em;
+    color: #3b8eda;
+}
+
+#editor{
+    text-decoration: underline solid #66c3f8 0.1em;
+    text-underline-offset: 0.1em;
+    color: #66c3f8;
+}
+
 fieldset {
     display: flex;
     flex-flow: column nowrap;
@@ -10,8 +22,8 @@ fieldset {
 	text-align: center;
 	padding: 1em 0;
 	margin: 1em 0;
-	color: #555;
-	border: 2px dashed #555;
+	color: #adb5bd;
+	border: 2px dashed #adb5bd;
 	border-radius: 7px;
 	cursor: default;
 }
@@ -44,8 +56,8 @@ fieldset {
 
 #filedrag.hover
 {
-	color: #f00;
-	border-color: #f00;
+	color: #00bc8c;
+	border-color: #00bc8c;
 	border-style: solid;
 	box-shadow: inset 0 3px 4px #888;
 }
