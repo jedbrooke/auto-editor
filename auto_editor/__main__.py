@@ -341,7 +341,9 @@ def main():
 
     # TEMP = tempfile.mkdtemp()
 
-    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4())) 
+    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4()))
+    os.mkdir(TEMP)
+    
     log = Log(args.debug, args.quiet, temp=TEMP)
     log.debug(f"\n   - Running as {getpass.getuser()}")
     log.debug(f'\n   - Temp Directory: {TEMP}')
