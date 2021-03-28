@@ -25,15 +25,10 @@
     <fieldset>
 
       <div class="form-group">
-        <div id="filedrag">Drag and drop file here</div>
-        <div class="input-group mb-3">
-          <div class="custom-file">
-            <label class="custom-file-label" for="filePath">Choose file</label>
-            <input type="file" class="custom-file-input" id="filePath" name="filePath" accept="video/mp4,video/x-m4v,video/*,audio/x-m4a,audio/*">
-          </div>
-          <!-- <div class="input-group-append">
-            <span class="input-group-text">Upload</span>
-          </div> -->
+        <div id="filedrag" for="filePath">
+          <label id="messages" for="filePath">Drag and drop files or click here to browse</label>
+          <input type="file" style="visibility: hidden;" id="filePath" name="filePath" accept="video/mp4,video/x-m4v,video/*,audio/x-m4a,audio/*">
+
         </div>
       </div>
 
