@@ -49,9 +49,9 @@
     $cmd .= "--output /home/ubuntu/exports/$id.mp4";
 
     // non blocking call to process.php with $cmd and $id
-    echo("$cmd<br>");
-    move_uploaded_file("$_POST['filePath']", "/home/ubuntu/imports/$id.mp4");
-    shell_exec("php process.php $cmd $id &");
+    echo("$cmd <br>");
+    move_uploaded_file($_POST['filePath'], "/home/ubuntu/imports/$id.mp4");
+    // shell_exec("php process.php $cmd $id &");
     echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     ?>
     </div>
