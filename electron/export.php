@@ -58,7 +58,7 @@
     $upload_ok = TRUE;
     $allowed_file_types = array("mp4","mp3","wav","mov","avi","mkv");
 
-    $image_file_type = strtolower(pathinfo(basename($_FILES["filePath"]["name"],PATHINFO_EXTENSION)));
+    $image_file_type = strtolower(pathinfo(basename($_FILES["filePath"]["name"]),PATHINFO_EXTENSION));
 
     if ($_FILES["filePath"]["size"] > $upload_limit) {
         $upload_ok = FALSE;
@@ -67,7 +67,7 @@
     if(!in_array($image_file_type,$allowed_file_types)) {
         $upload_ok = FALSE;
         echo("<h3>Sorry, we do not support .$image_file_type files</h3>");
-        echo("<h4> supported file types:" . implode(" ", $allowed_file_types) . "</h4>");
+        echo("<h4> supported file types: " . implode(" ", $allowed_file_types) . "</h4>");
     }
 
 
