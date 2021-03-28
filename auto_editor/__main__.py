@@ -5,6 +5,7 @@
 import os
 import sys
 import tempfile
+import uuid
 from shutil import rmtree
 
 version = '21w11a'
@@ -337,7 +338,9 @@ def main():
         print('Auto-Editor version', version)
         sys.exit()
 
-    TEMP = tempfile.mkdtemp()
+    # TEMP = tempfile.mkdtemp()
+
+    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4())) 
     log = Log(args.debug, args.quiet, temp=TEMP)
     log.debug(f'\n   - Temp Directory: {TEMP}')
 
