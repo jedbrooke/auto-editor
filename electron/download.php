@@ -134,7 +134,7 @@
 
     <body>
         <div style="display:flex;">
-            <h1 id="auto"><a href="http://auto-editor.ddns.net/">Auto</h1><h1 id="editor">-Editor</a></h1>
+            <h1 id="auto"><a href="http://auto-editor.ddns.net/" style="color:#3b8eda;">Auto</a></h1><h1 id="editor"><a href="http://auto-editor.ddns.net/" style="color:#66c3f8;">-Editor</a></h1>
         </div>
 
         <div class="center"></div>
@@ -180,7 +180,7 @@
         ?>
     <div class="Footer">
         <div style="width:100%">
-            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">github.com/jedbrooke/auto-editor</a>
+            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">Find us on GitHub</a>
             <img src="GitHub-Logo.png" alt="GitHub" style="width:3.5em; height:2em;">
         </div>
         <div style="width:100%">
