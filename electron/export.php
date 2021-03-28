@@ -64,6 +64,7 @@
     echo("Temp name: $temp_name <br>");
     echo("file type: $image_file_type <br>");
 
+    echo("changes<br>");
     foreach($_FILES["filePath"] as $key => $value) {
         echo("'$key':'$value'<br>");
     }
