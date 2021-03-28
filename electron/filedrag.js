@@ -13,8 +13,9 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 	// output information
 	function Output(msg) {
-		var m = $id("filedrag");
+		var m = $id("messages");
 		m.innerHTML = msg;
+		
 	}
 
 
@@ -47,13 +48,13 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	function ParseFile(file) {
 		if(file.type.substring(0, 6) === "video/" || file.type.substring(0, 6) === "audio/"){
 			Output(
-				"<p>File information: <strong>" + file.name +
-				"</strong> type: <strong>" + file.type +
-				"</strong> size: <strong>" + file.size +
-				"</strong> bytes</p>"
+				"File information: " + file.name
 			);
+			document.getElementById("exportButton").disabled = false;
+
 		}else{
-			Output("Notice: Please upload a video or audio file (.mp4, .mp3 ...etc)");
+			Output("Please upload a video or audio file (.mp4, .mp3 ...etc)");
+			document.getElementById("exportButton").disabled = true;
 		}
 		
 
@@ -64,9 +65,8 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	function Init() {
 
 		var fileselect = $id("filePath"),
-			filedrag = $id("filedrag"),
-            submitbutton = $id("submitbutton");
-
+			filedrag = $id("filedrag");
+		$id("exportButton").disabled = true;
 		// file select
 		fileselect.addEventListener("change", FileSelectHandler, false);
 
