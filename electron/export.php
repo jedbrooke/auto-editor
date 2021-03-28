@@ -57,8 +57,12 @@
     $upload_limit = 100000000;
     $upload_ok = TRUE;
     $allowed_file_types = array("mp4","mp3","wav","mov","avi","mkv");
+    
+    $temp_name = basename($_FILES["filename"]["name"]);
 
-    $image_file_type = strtolower(pathinfo(basename($_FILES["filePath"]["name"]),PATHINFO_EXTENSION));
+
+    $image_file_type = strtolower(pathinfo($temp_name,PATHINFO_EXTENSION));
+    echo("file type: $image_file_type");
 
     if ($_FILES["filePath"]["size"] > $upload_limit) {
         $upload_ok = FALSE;
