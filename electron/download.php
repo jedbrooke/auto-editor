@@ -167,11 +167,10 @@
 
         <?php
             $id = $_GET["id"];
-            echo($id);
-            if(file_exists("/downloads/$id.mp4"){
-                echo("you video has finished processing, it's available <a href='/downloads/$id.mp4'>here</a>");
+            if(file_exists("/var/www/html/downloads/$id.mp4") ){
+                echo("you video has finished processing, it's available <a href=\'downloads/$id.mp4\'>here</a>");
             }else{
-                echo("your video has not processed yet, please refresh in a moment");
+                echo("<h3>your video has not processed yet, please refresh in a moment</h3>");
             }
                 // if id is finished by checking output dir
             // give them the download
