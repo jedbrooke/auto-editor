@@ -6,6 +6,7 @@ import os
 import sys
 import tempfile
 import getpass
+import uuid
 from shutil import rmtree
 
 version = '21w11a'
@@ -340,7 +341,7 @@ def main():
 
     # TEMP = tempfile.mkdtemp()
 
-    TEMP = os.path.join("/var/www/auto_editor_temp_dir") 
+    TEMP = os.path.join("/var/www/auto_editor_temp_dir",str(uuid.uuid4())) 
     log = Log(args.debug, args.quiet, temp=TEMP)
     log.debug(f"\n   - Running as {getpass.getuser()}")
     log.debug(f'\n   - Temp Directory: {TEMP}')
