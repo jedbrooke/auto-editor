@@ -45,12 +45,16 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 	// output file information
 	function ParseFile(file) {
+		if(file.type.substring(0, 6) === "video/" || file.type.substring(0, 6) === "audio/"){
 			Output(
 				"<p>File information: <strong>" + file.name +
 				"</strong> type: <strong>" + file.type +
 				"</strong> size: <strong>" + file.size +
 				"</strong> bytes</p>"
 			);
+		}else{
+			Output("Notice: Please upload a video or audio file (.mp4, .mp3 ...etc)");
+		}
 		
 
 	}
