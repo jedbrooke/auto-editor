@@ -49,6 +49,7 @@
     array_push($cmd,$_POST['exportType']);
 
     array_push($cmd,"--output","/home/ubuntu/exports/$id.mp4");
+    array_push($cmd,"--video_codec libx264");
 
     
     $cmd = implode(" ",$cmd);
