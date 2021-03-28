@@ -1,12 +1,12 @@
 -intro
     Hello LA Hacks, Auto Editor is an existing open source command line video/audio editing program by WyattBlue. This versatile program can cut out unnecessary parts of a video
     like silence and still footage, automatically. But due to its command line interface, its quite inaccessbile to most users, not too mention that video processing could overload
-    most computers, especially the growing number of chromebook users.
+    lower spec computers, for example a chromebook or tablet.
 -show product
     This is the Cloud-based Auto Editor GUI. This vastly increases the usability of the program, first with the GUI and secondly by offloading the intensive processing to the 
     Oracle Cloud infrastucture. Files are extremely easy to upload, drag and drop them or simply browse for your files. A beginner could use the selected primary options (talk about the options)
     or have more control using the advanced options(talk about advanced options). Exporting the file, uploads it to the cloud, which then handles the processing. 
-    When the file is ready, you can download the mp4/m4a or any other user specified file format straight from the browser.
+    When the file is ready, you can download the video or audio file straight from the browser.
 -show improved vid
     This video has actually been edited using our GUI and the Auto-Editor. For another example, this lecture video had its silent parts cut out, which deceased its view time from 40min to 30min. 
     This 25% time saved comes at no user investment too. This brings us to to the true power of this package.
