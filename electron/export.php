@@ -23,7 +23,9 @@
     // generate a video ID
     $id = uniqid("", $more_entropy = false);
 
-    $cmd = "python3 -m /home/ubuntu/auto-editor/auto_editor " . "/home/ubuntu/imports/$id.mp4 " . $_POST['exportRes'];
+    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor","/home/ubuntu/imports/$id.mp4");
+
+    array_push($cmd,$_POST['exportRes']);
 
     $clip = " -mclip " . (string) $_POST['minClip'];
     $cut = " -mcut " . (string) $_POST['minCut'];
@@ -31,27 +33,25 @@
     $silentSpeed = " -s " . (string) $_POST['silentSpeed'];
 
     if($_POST['vidBit'] == null && $_POST['audbit'] == null){
-        $cmd .= $_POST['exportBit'];
+        array_push($cmd,$_POST['exportBit']);
     }else{
-        $audio = " -ab " . (string) $_POST['audBit'];
-        $video = " -crf " . (string) $_POST['vidBit'];
-        $cmd .= $audio;
-        $cmd .= $video;
+        array_push($cmd,"-ab",(string) $_POST['audBit'],"-crf",(string) $_POST['vidBit']);
     }
 
-    $cmd .= $clip;
-    $cmd .= $cut;
-    $cmd .= $vidSpeed;
-    $cmd .= $silentSpeed;
+    array_push($cmd,$clip);
+    array_push($cmd,$cut);
+    array_push($cmd,$vidSpeed);
+    array_push($cmd,$silentSpeed);
 
-    $cmd .= $_POST['exportType'];
+    array_push($cmd,$_POST['exportType']);
 
-    $cmd .= "--output /home/ubuntu/exports/$id.mp4";
+    array_push($cmd,"--output","/home/ubuntu/exports/$id.mp4");
 
     // non blocking call to process.php with $cmd and $id
-    echo("$cmd <br>");
+    $cmd = implode(" ",$cmd);
+    // echo("$cmd <br>");
     move_uploaded_file($_POST['filePath'], "/home/ubuntu/imports/$id.mp4");
-    // shell_exec("php process.php $cmd $id &");
+    shell_exec("php process.php \"$cmd\" $id &");
     echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     ?>
     </div>
