@@ -94,9 +94,14 @@
     </div>
 
     <div class="Footer">
-        <p>
-            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">https://github.com/jedbrooke/auto-editor</a>
-        </p>
+        <div style="width:100%">
+            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">github.com/jedbrooke/auto-editor</a>
+            <img src="GitHub-Logo.png" alt="GitHub" style="width:3.5em; height:2em;">
+        </div>
+        <div style="width:100%">
+            Hosted on&nbsp;
+            <img src="Oracle-Logo.png" alt="Oracle" style="width:5em; height:3em;">
+        </div>
     </div>
 </body>
 
