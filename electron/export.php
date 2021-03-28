@@ -111,7 +111,7 @@
     if($upload_ok) {
         // non blocking call to process.php with $cmd and $id
         // echo("php process.php \"$cmd\" $id &");
-        passthru("php process.php \"$cmd\" $id &");
+        passthru("php process.php \"$cmd\" $id > /dev/null &");
         echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     }
     ?>
