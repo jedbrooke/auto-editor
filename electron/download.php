@@ -168,7 +168,7 @@
         <?php
             $id = $_GET["id"];
             if( file_exists("/var/www/html/downloads/$id.mp4") ) {
-                echo("<h3>Your video has finished processing, it's available <a href=\'downloads/$id.mp4\'>here</a></h3>");
+                echo("<h3>Your video has finished processing, it's available <a href='downloads/$id.mp4'>here</a></h3>");
             }else{
                 echo("<h3>Your video has not processed yet, please refresh in a moment.</h3>");
             }
