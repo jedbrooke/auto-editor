@@ -15,7 +15,7 @@
 
 <body>
     <div style="display:flex;">
-        <h1 id="auto">Auto</h1><h1 id="editor">-Editor</h1>
+        <h1 id="auto"><a href="http://auto-editor.ddns.net/">Auto</h1><h1 id="editor">-Editor</a></h1>
     </div>
 
 <div style="form-group">
@@ -54,6 +54,12 @@
     shell_exec("php process.php \"$cmd\" $id &");
     echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     ?>
+    </div>
+
+    <div class="Footer">
+        <p>
+            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">https://github.com/jedbrooke/auto-editor</a>
+        </p>
     </div>
 </body>
 

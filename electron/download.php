@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="AddOns.css">
-        <title>Auto-Editor (Processing Video)</title>
+        <title>Auto-Editor</title>
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
         <!-- CSS only -->
         <script src="./js/bootstrap.bundle.js"></script>
@@ -134,7 +134,7 @@
 
     <body>
         <div style="display:flex;">
-            <h1 id="auto">Auto</h1><h1 id="editor">-Editor</h1>
+            <h1 id="auto"><a href="http://auto-editor.ddns.net/">Auto</h1><h1 id="editor">-Editor</a></h1>
         </div>
 
         <div class="center"></div>
@@ -178,6 +178,10 @@
             // else:
                 // tis still processing wait pls
         ?>
-
+    <div class="Footer">
+        <p>
+            <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">https://github.com/jedbrooke/auto-editor</a>
+        </p>
+    </div>
     </body>
 </html>
