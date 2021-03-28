@@ -1,11 +1,13 @@
 #auto{
     text-decoration: underline solid #3b8eda 0.1em;
     text-underline-offset: 0.1em;
+    color: #3b8eda;
 }
 
 #editor{
     text-decoration: underline solid #66c3f8 0.1em;
     text-underline-offset: 0.1em;
+    color :#66c3f8;
 }
 
 #messages{
