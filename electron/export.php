@@ -26,7 +26,7 @@
     $id = uniqid("", $more_entropy = false);
     $name = "$id.mp4";
 
-    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor","$uploads_dir/$name","--no_open");
+    $cmd = array("/usr/bin/python3","/home/ubuntu/auto-editor/auto_editor/__main__.py","$uploads_dir/$name","--no_open");
 
     array_push($cmd,$_POST['exportRes']);
 
