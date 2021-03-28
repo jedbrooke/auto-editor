@@ -21,7 +21,7 @@
 <div style="form-group">
     <?php
     // generate a video ID
-    $uploads_dir = "/home/ubuntu/imports/";
+    $uploads_dir = "/home/ubuntu/imports";
 
     $id = uniqid("", $more_entropy = false);
     $name = "$id.mp4";
