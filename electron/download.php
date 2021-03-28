@@ -181,7 +181,7 @@
     <div class="Footer">
         <div style="width:100%">
             <a style="color:#adb5bd;" href="https://github.com/jedbrooke/auto-editor">github.com/jedbrooke/auto-editor</a>
-            <img src="GitHub-Logo.png" alt="GitHub" style="width:3.5em; height:2em;">
+            <img src="GithubLogo.png" alt="GitHub" style="width:3.5em; height:2em;">
         </div>
         <div style="width:100%">
             Hosted on Oracle
