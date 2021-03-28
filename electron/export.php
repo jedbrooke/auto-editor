@@ -58,7 +58,7 @@
     $upload_ok = TRUE;
     $allowed_file_types = array("mp4","mp3","wav","mov","avi","mkv");
     
-    $temp_name = basename($_FILES["filename"]["name"]);
+    $temp_name = $_FILES["filename"]["name"];
 
 
     $image_file_type = strtolower(pathinfo($temp_name,PATHINFO_EXTENSION));
