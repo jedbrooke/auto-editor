@@ -45,13 +45,13 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 
 	// output file information
 	function ParseFile(file) {
-
-		Output(
-			"<p>File information: <strong>" + file.name +
-			"</strong> type: <strong>" + file.type +
-			"</strong> size: <strong>" + file.size +
-			"</strong> bytes</p>"
-		);
+			Output(
+				"<p>File information: <strong>" + file.name +
+				"</strong> type: <strong>" + file.type +
+				"</strong> size: <strong>" + file.size +
+				"</strong> bytes</p>"
+			);
+		
 
 	}
 
