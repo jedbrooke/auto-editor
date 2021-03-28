@@ -20,7 +20,10 @@
 
 <div style="form-group">
     <?php
-    $cmd = "auto-editor " . $_POST['inputFiles'][0] . $_POST['exportRes'];
+    // generate a video ID
+    $id = uniqid("", $more_entropy = false);
+
+    $cmd = "auto-editor " . "/import/$id.mp4 " . $_POST['exportRes'];
 
     $clip = " -mclip " . (string) $_POST['minClip'];
     $cut = " -mcut " . (string) $_POST['minCut'];
@@ -43,14 +46,11 @@
 
     $cmd .= $_POST['exportType'];
 
-    $output=null;
-    $retval=null;
-
-    // generate a video ID
-    $id = uniqid("", $more_entropy = false);
+    $cmd .= "--output /exports/$id.mp4";
 
     // non blocking call to process.php with $cmd and $id
     // exec($cmd, $output, $retval);
+    move_uploaded_file("$_POST['filePath']", "/imports/$id.mp4");
     shell_exec("php process.php $cmd $id &");
     echo("you video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a>");
     ?>
