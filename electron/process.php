@@ -3,5 +3,6 @@
     // run command
     // when command is done
     shell_exec("$argv[1]");
-    shell_exec("mv /exports/$argv[2].mp4 /downloads/$argv[2].mp4");
+    rename("/home/ubuntu/exports/$argv[2].mp4","/var/www/html/downloads/$argv[2].mp4");
+    delete("/home/ubuntu/imports/$argv[2]");
 ?>

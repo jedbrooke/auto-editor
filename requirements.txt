@@ -1,0 +1,6 @@
+numpy
+audiotsm2
+av
+opencv-python
+youtube-dl
+requests
