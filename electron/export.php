@@ -83,7 +83,7 @@
             echo("<h3>Sorry, we do not support .$image_file_type files</h3>");
             echo("<h4> supported file types: " . implode(" ", $allowed_file_types) . "</h4>");
             
-            echo("moving $_FILES['filePath']['tmp_name'] to $uploads_dir/$name");
+            echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$name");
 
             if(!move_uploaded_file($_FILES["filePath"]["tmp_name"], "$uploads_dir/$name")) {
                 $upload_ok = FALSE;
