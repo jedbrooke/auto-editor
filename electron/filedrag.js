@@ -52,8 +52,10 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 				"</strong> size: <strong>" + file.size +
 				"</strong> bytes</p>"
 			);
+			document.getElementById("exportButton").disabled = false;
 		}else{
 			Output("Notice: Please upload a video or audio file (.mp4, .mp3 ...etc)");
+			document.getElementById("exportButton").disabled = true;
 		}
 		
 
@@ -64,9 +66,8 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	function Init() {
 
 		var fileselect = $id("filePath"),
-			filedrag = $id("filedrag"),
-            submitbutton = $id("submitbutton");
-
+			filedrag = $id("filedrag");
+		$id("exportButton").disabled = true;
 		// file select
 		fileselect.addEventListener("change", FileSelectHandler, false);
 
