@@ -29,7 +29,7 @@
     }
 
     $id = uniqid("", $more_entropy = false);
-    $output_name = "$id.mp4";
+    
 
     
     
@@ -69,7 +69,6 @@
     
     if($upload_ok) {
         echo("moving " . $_FILES['filePath']['tmp_name'] . " to $uploads_dir/$input_name <br>");
-        echo(is_uploaded_file($_FILES['filePath']['tmp_name']));
         if(!move_uploaded_file($_FILES["filePath"]["tmp_name"], "$uploads_dir/$input_name")) {
             $upload_ok = FALSE;
             echo("<h3>Sorry, something went wrong uploading your video :/</h3>");
@@ -98,8 +97,23 @@
 
     array_push($cmd,$_POST['exportType']);
 
+
+    $output_name = "$id";
+    if($_POST['exportType'] == "--export_to_premiere") {
+        $output_name .= ".xml";
+    } else if ($_POST['exportType'] == "--export_to_final_cut_pro") {
+        $output_name .= ".fcpxml";
+    } else if ($_POST['exportType'] == "--export_to_resolve") {
+        $output_name .= ".xml";
+    } else if ($_POST['exportType'] == "--export_as_audio") {
+        $output_name .= ".wav";
+    } else {
+        $output_name .= ".mp4";
+        array_push($cmd,"--video_codec libx264");
+    }
+    
     array_push($cmd,"--output","/home/ubuntu/exports/$output_name");
-    array_push($cmd,"--video_codec libx264");
+    
 
     $cmd = implode(" ",$cmd);
 
