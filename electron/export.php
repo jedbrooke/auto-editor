@@ -22,6 +22,11 @@
     <?php
     // generate a video ID
     $uploads_dir = "/home/ubuntu/imports";
+    if(touch("$uploads_dir/foo.txt")){
+        echo("touch $uploads_dir/foo.txt successful! <br>");
+    } else {
+        echo("touch $uploads_dir/foo.txt failed! <br>");
+    }
 
     $id = uniqid("", $more_entropy = false);
     $output_name = "$id.mp4";
