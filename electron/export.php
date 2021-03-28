@@ -23,7 +23,8 @@
     // generate a video ID
     $id = uniqid("", $more_entropy = false);
 
-    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor");
+    $cmd = array("/usr/bin/python3","-m","/home/ubuntu/auto-editor/auto_editor","/home/ubuntu/imports/$id.mp4");
+
     array_push($cmd,$_POST['exportRes']);
 
     $clip = " -mclip " . (string) $_POST['minClip'];
@@ -48,9 +49,9 @@
 
     // non blocking call to process.php with $cmd and $id
     $cmd = implode(" ",$cmd);
-    echo("$cmd <br>");
+    // echo("$cmd <br>");
     move_uploaded_file($_POST['filePath'], "/home/ubuntu/imports/$id.mp4");
-    // shell_exec("php process.php $cmd $id &");
+    shell_exec("php process.php \"$cmd\" $id &");
     echo("<h3>Your video is being processed, when it's done it will be <a href='download.php?id=$id'>here</a></h3>");
     ?>
     </div>
