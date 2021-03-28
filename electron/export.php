@@ -102,8 +102,7 @@
             <img src="GitHub-Logo.png" alt="GitHub" style="width:3.5em; height:2em;">
         </div>
         <div style="width:100%">
-            Hosted on&nbsp;
-            <img src="Oracle-Logo.png" alt="Oracle" style="width:5em; height:3em;">
+            Hosted on Oracle
         </div>
     </div>
 </body>
