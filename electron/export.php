@@ -51,6 +51,12 @@
         echo("<h3>Sorry, your file is too large, there is a 100MB limit for free tier customers</h3>");
     }
     if($upload_ok) {
+    	if($_FILES["filePath"]["error"] != 0) {
+    		$upload_ok = FALSE;
+    		echo("<h3>Sorry, something went wrong uploading your video :/ </h3>");
+    	}
+    }
+    if($upload_ok) {
         if(!in_array($file_extension,$allowed_file_types)) {
             $upload_ok = FALSE;
             echo("<h3>Sorry, we do not support .$file_extension files</h3>");
